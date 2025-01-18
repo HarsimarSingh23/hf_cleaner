@@ -3,7 +3,7 @@ import sys
 import time
 import shutil
 import streamlit as st
-from .constants import PLATFORM
+from .constants import PLATFORM, CACHE_LOC
 
 def get_size_in_path(path="."):
         total_size = 0
@@ -59,9 +59,9 @@ def hf_cache_loc():
     current_platform = get_platform()
 
     file_locations = {
-        "darwin": os.path.expanduser("~/.cache/huggingface/hub"),
-        "linux": os.path.expanduser("~/.myapp"),
-        "win32": os.path.expandvars("%APPDATA%\\MyApp"),
+        "darwin": CACHE_LOC["darwin"],
+        "linux": CACHE_LOC["linux"],
+        "win32": CACHE_LOC["win32"],
     }
 
     # Map sys.platform to user-friendly platform names if needed
