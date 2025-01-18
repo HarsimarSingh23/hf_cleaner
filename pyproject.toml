@@ -1,19 +1,28 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [tool.poetry]
 name = "hf_cleaner"
 version = "0.1.0"
 description = ""
 authors = ["harsimarsingh <sainiharsimar@gmail.com>"]
 readme = "README.md"
+liscence = "MIT"
+keywords = ["hugging_face", "cleanup", "utility"]
+packages = [
+    {include = "hf_cleaner"}
+]
+
+include = [
+    "app.py",
+    "run_app.py"
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 streamlit = "^1.41.0"
 
+[tool.poetry.scripts]
+hf_cleaner = "run_app:app"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
