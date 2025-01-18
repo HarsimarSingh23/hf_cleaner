@@ -5,10 +5,16 @@ description = ""
 authors = ["harsimarsingh <sainiharsimar@gmail.com>"]
 readme = "README.md"
 liscence = "MIT"
+license-files = ["LICEN[CS]E*"]
 keywords = ["hugging_face", "cleanup", "utility"]
 packages = [
     {include = "hf_cleaner"}
 ]
+
+[project.urls]
+Homepage = "https://github.com/HarsimarSingh23/hf_cleaner"
+Issues = "https://github.com/HarsimarSingh23/hf_cleaner/issues"
+
 
 include = [
     "app.py",
