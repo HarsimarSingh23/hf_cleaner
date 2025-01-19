@@ -22,6 +22,7 @@ include = [
 [tool.poetry.dependencies]
 python = "^3.11"
 streamlit = "^1.41.0"
+pytest = "^8.3.0"
 
 [tool.poetry.scripts]
 hf_cleaner = "run_app:run_app"
