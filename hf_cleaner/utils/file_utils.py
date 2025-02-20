@@ -5,6 +5,7 @@ import shutil
 import streamlit as st
 from .constants import PLATFORM, CACHE_LOC
 
+
 def get_size_in_path(path="."):
         total_size = 0
         if os.path.exists(path):
@@ -73,6 +74,7 @@ def hf_cache_loc():
 
     if current_platform not in file_locations:
         raise ValueError(f"Unsupported platform: {platform_map.get(current_platform, 'Unknown')}")
+
     return file_locations[current_platform]
 
 
